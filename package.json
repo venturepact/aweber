@@ -1,0 +1,23 @@
+{
+  "name": "aweber",
+  "version": "1.0.0",
+  "description": "A nodejs module to connect to aweber API",
+  "main": "aweber.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venturepact/aweber.git"
+  },
+  "keywords": [
+    "aweber",
+    "nodejs"
+  ],
+  "author": "Tarun Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/venturepact/aweber/issues"
+  },
+  "homepage": "https://github.com/venturepact/aweber#readme"
+}
