@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/venturepact/aweber/issues"
   },
-  "homepage": "https://github.com/venturepact/aweber#readme"
+  "homepage": "https://github.com/venturepact/aweber#readme",
+  "dependencies": {
+    "q": "^1.5.0"
+  }
 }
