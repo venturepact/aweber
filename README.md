@@ -81,7 +81,7 @@ aweber.configure(configuration);
 
 ## Accounts
 
-#### show : show all account resources
+#### show : returns all account resources
 
 ``` javascript
 
@@ -96,7 +96,7 @@ aweber.account.show()
 
 ## Broadcasts 
 
-#### show : List of broadcast messages
+#### show : returns list of broadcast messages
 
 ``` javascript
 
@@ -112,7 +112,7 @@ aweber.broadcast.show({
 
 ```
 
-#### create : Create a broadcast message
+#### create : create a broadcast message
 
 You can create broadcast message by adding all the neccessary properties in second arguments
 
@@ -135,7 +135,7 @@ aweber.broadcast.create({
 
 ## Campaign
 
-#### show : A collection of Followup or Broadcast Campaigns
+#### show : returns collection of Followup or Broadcast Campaigns
 
 ``` javascript
 
@@ -169,12 +169,79 @@ aweber.campaign.find({
 
 ## Click
 
+#### show : returns collection of Click events
 ``` javascript 
 aweber.click.show({
-accountId,
-"listId","campaignId","linkId"
-},{
-
+    accountId : '<accountId >',
+    listId : '<listId>',
+    campaignId : '<campaignId>',
+    linkId : '<linkId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
 })
+
+```
+
+## Component
+
+#### show : returns collection of WebFormSplitTest Components
+
+``` javascript 
+
+aweber.component.show({
+    accountId : '<accountId >',
+    listId : '<listId>',
+    campaignId : '<campaignId>',
+    linkId : '<linkId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+## Custom Field
+
+#### show : returns collection of CustomFields for a List
+
+``` javascript
+aweber.customField.show({
+    accountId : '<accountId>',
+    listId : '<listId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### create : create a custom field for a list
+
+``` javascript 
+
+aweber.customField.create({
+    accountId : '<accountId>',
+    listId : '<listId>'
+},{
+    name : '<name>'  //Name of CustomField
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+## Doc
+
+#### show : return all docs
+
+``` javascript
+
+aweber.doc.show({})
 
 ```
