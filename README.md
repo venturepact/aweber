@@ -85,7 +85,7 @@ aweber.configure(configuration);
 
 ``` javascript
 
-aweber.accounts.show()
+aweber.account.show()
     .then((result)=>{
         console.log(result);
     }).catch((error)=> {
@@ -94,5 +94,87 @@ aweber.accounts.show()
 
 ```
 
+## Broadcasts 
 
+#### show : List of broadcast messages
 
+``` javascript
+
+aweber.broadcast.show({
+        accountId : '< accountId >',
+        listId : '< listId >'
+    })
+    .then((result)=>{
+        console.log(result);
+    }).catch((error)=> {
+        console.log(error);
+    })
+
+```
+
+#### create : Create a broadcast message
+
+You can create broadcast message by adding all the neccessary properties in second arguments
+
+``` javascript 
+
+aweber.broadcast.create({ 
+    accountId : '< accountId >', listId : '< listId >'},{
+    body_html : '<body_html>',
+    body_text : '<body_text>',
+    click_tracking_enabled : '<click_tracking_enabled>',
+    exclude_lists : '< List Of List Uris >',
+    ....
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+``` 
+
+## Campaign
+
+#### show : A collection of Followup or Broadcast Campaigns
+
+``` javascript
+
+aweber.campaign.show({
+    accountId : '<accountId>',
+    listId : '<listId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+``` 
+
+#### find : returns collection of Campaign according campaign_type
+
+``` javascript 
+
+aweber.campaign.find({
+    accountId : '<accountId>',
+    listId : '<listId>'
+},{
+    campaign_type : '<campaign_type>' // Enum "b", "f"
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+## Click
+
+``` javascript 
+aweber.click.show({
+accountId,
+"listId","campaignId","linkId"
+},{
+
+})
+
+```
