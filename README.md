@@ -864,10 +864,27 @@ aweber.trackedEvent.show({
 
 ```
 
+#### show : return TrackedEvent
+
+``` javascript
+
+aweber.trackedEvent.show({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    campaignId : '<campaignId>',
+    messageId : '<messageId>',
+    trackEventId : '<trackEventId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
 ## WebFormSplitTests
 
 #### show : returns collection of WebFormSplitTests
-
 
 ``` javascript
 
@@ -882,16 +899,47 @@ aweber.webFormSplitTest.show({
 
 ```
 
+#### showById : return WebFormSplitTest
+
+``` javascript
+
+aweber.webFormSplitTest.show({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    webFormSplitTestId : '<webFormSplitTestId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
 ## WebForm Collection
 
 #### show : returns collection of WebForms 
-
 
 ``` javascript
 
 aweber.webForm.show({
     accountId : '<accountId>',
     listId : '<listId>',
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### showById : return WebForm
+
+``` javascript
+
+aweber.webForm.showById({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    webFormId : '<webFormId>'
 }).then((result)=>{
     console.log(result);
 }).catch((error)=> {
