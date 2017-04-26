@@ -243,5 +243,266 @@ aweber.customField.create({
 ``` javascript
 
 aweber.doc.show({})
+.then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
 
 ```
+
+## Integration
+
+#### show : returns collection of 3rd Party Service Integrations
+
+``` javascript
+
+aweber.integration.show({accountId : '<accountId>'})
+.then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+## Link
+
+#### show : return collection of Links appearing in a Campaign 
+
+``` javascript
+
+aweber.link.show({
+    accountId : '<accountId>',
+    listId : '<linkId>',
+    campaignId : '<campaignId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+## List 
+
+#### show : returns collection of Subscriber Lists
+
+``` javascript
+
+aweber.list.show({
+    accountId : '<accountId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### find :  returns collection of Lists matching the given search parameters present in second argument
+
+``` javascript
+
+aweber.list.find({
+    accountId : '<accountId>'
+},{
+    name : '<name of list>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+## Message
+
+#### show : returns collection of sent message events
+
+``` javascript
+
+aweber.message.show({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    campaignId : '<campaignId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### getSubscribers : returns a collection of Subscribers that were sent this Campaign
+
+``` javascript
+
+aweber.message.getSubscribers({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    campaignId : '<campaignId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+
+## Open
+
+#### show : returns collection of Open events
+
+``` javascript
+
+aweber.open.show({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    campaignId : '<campaignId>',
+    messageId : '<messageId>',
+    openId : '<openId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+## Stat
+
+#### show : returns collection of Broadcast Campaign Stats
+
+``` javascript
+
+aweber.stat.show({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    campaignId : '<campaignId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+## Subscriber
+
+#### show : return collection of subscribers
+
+
+``` javascript
+
+aweber.subscriber.show({
+    accountId : '<accountId>',
+    listId : '<listId>',
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### find : returns a collection of Subscribers that matches the given search parameters
+
+``` javascript
+
+aweber.subscriber.find({
+    accountId : '<accountId>',
+    listId : '<listId>',
+},{
+    ad_tracking : '<ad_tracking>',
+    area_code : '<area_code>',
+    city : '<city>',
+    country : '<country>',
+    custom_fields : '<custom_fields>' // in json object Custom Field Data,
+    status : '<status>',
+    name : '<name>'
+    // ... and other Subscriber collection field please refer https://labs.aweber.com/docs/reference/1.0#subscriber_collection
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### create : add a subscriber to a list
+
+``` javascript
+
+aweber.subscriber.create({
+    accountId : '<accountId>',
+    listId : '<listId>',
+},{
+    custom_fields : '<custom_fields>' // in json object Custom Field Data,
+    tags : '<tags>',
+    name : '<name>'
+    // ... and other Subscriber collection field please refer https://labs.aweber.com/docs/reference/1.0#subscriber_collection
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+## Tracked Event 
+
+#### show : returns A collection of TrackedEvents
+
+``` javascript
+
+aweber.trackedEvent.show({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    campaignId : '<campaignId>',
+    messageId : '<messageId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+## WebFormSplitTests
+
+#### show : returns collection of WebFormSplitTests
+
+
+``` javascript
+
+aweber.webFormSplitTest.show({
+    accountId : '<accountId>',
+    listId : '<listId>',
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+## WebForm Collection
+
+#### show : returns collection of WebForms 
+
+
+``` javascript
+
+aweber.webForm.show({
+    accountId : '<accountId>',
+    listId : '<listId>',
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
