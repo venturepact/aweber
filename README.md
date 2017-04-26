@@ -94,6 +94,71 @@ aweber.account.show()
 
 ```
 
+#### showById : returns integrations_collection_link and lists_collection_link associated to account Id
+
+``` javascript
+
+aweber.account.showById({
+    accountId : '<accountId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### findSubscribers : returns a Collection of all Subscribers on any List in the Account that matches the search parameters
+
+``` javascript
+
+aweber.account.findSubscribers({
+    accountId : '<accountId>'
+},{
+    ad_tracking : '<ad_tracking>',
+    area_code : '<area_code>',
+    city : '<city>',
+    country : '<country>',
+    custom_fields : '<custom_fields>', // json object of CustomField ,
+    name : '<name>',
+    email : '<email>'
+    // ... for more fields refer https://labs.aweber.com/docs/reference/1.0#account_entry
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### getWebForms : returns a list of all active WebForms for all Lists on this Account.
+
+``` javascript
+
+aweber.account.getWebForms({
+    accountId : '<accountId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### getWebFormSplitTests : returns a list of all active WebForm Split Tests for all Lists on this Account
+
+``` javascript
+
+aweber.account.getWebFormSplitTests({
+    accountId : '<accountId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
 ## Broadcasts 
 
 #### show : returns list of broadcast messages
@@ -132,6 +197,63 @@ aweber.broadcast.create({
 })
 
 ``` 
+
+#### showById : returns Broadcast message details by it's id
+
+``` javascript 
+aweber.broadcast.showById({
+        accountId : '< accountId >',
+        listId : '< listId >',
+        broadcastId : '<broadcastId>'
+    })
+    .then((result)=>{
+        console.log(result);
+    }).catch((error)=> {
+        console.log(error);
+    })
+
+```
+
+#### delete : delete a broadcast message
+
+``` javascript 
+aweber.broadcast.delete({
+        accountId : '< accountId >',
+        listId : '< listId >',
+        broadcastId : '<broadcastId>'
+    })
+    .then((result)=>{
+        console.log(result);
+    }).catch((error)=> {
+        console.log(error);
+    })
+
+```
+
+#### update : Update Broadcast message 
+
+``` javascript 
+aweber.broadcast.delete({
+        accountId : '< accountId >',
+        listId : '< listId >',
+        broadcastId : '<broadcastId>'
+    },{
+        body_html : '<body_html>',
+        body_text : '<body_text>',
+        subject : '<subject>',
+        notify_on_send : '<notify_on_send>',
+        facebook_integration : '<facebook_integration>'
+        // for more parameters refer https://labs.aweber.com/docs/reference/1.0#broadcast_entry
+    })
+    .then((result)=>{
+        console.log(result);
+    }).catch((error)=> {
+        console.log(error);
+    })
+
+
+
+
 
 ## Campaign
 
