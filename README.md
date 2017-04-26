@@ -251,8 +251,45 @@ aweber.broadcast.delete({
         console.log(error);
     })
 
+```
 
+## Broadcast Campaign
 
+#### showById : Represents a Broadcast Campaign
+
+``` javascript 
+aweber.broadcastCampaign.showById({
+        accountId : '< accountId >',
+        listId : '< listId >',
+        broadcastId : '<broadcastId>'
+    })
+    .then((result)=>{
+        console.log(result);
+    }).catch((error)=> {
+        console.log(error);
+    })
+
+```
+
+## Broadcast Scheduler
+
+#### schedule : allows the scheduling of broadcast messages
+
+``` javascript 
+aweber.broadcastScheduler.schedule({
+        accountId : '< accountId >',
+        listId : '< listId >',
+        broadcastId : '<broadcastId>'
+    },{
+        scheduled_for : '<scheduled_for>' // DateTime ISO 8601 format (Scheduled time for sending broadcast message.)
+    })
+    .then((result)=>{
+        console.log(result);
+    }).catch((error)=> {
+        console.log(error);
+    })
+
+```
 
 
 ## Campaign
@@ -289,6 +326,40 @@ aweber.campaign.find({
 
 ```
 
+#### showById : a followup or Broadcast Campaign 
+
+``` javascript
+
+aweber.campaign.showById({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    broadcastId : '<broadcastId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+``` 
+
+## Cancel Broadcast 
+
+#### cancel : canceling of broadcast messages
+
+``` javascript
+
+aweber.cancelBroadcast.cancel({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    broadcastId : '<broadcastId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+``` 
+
 ## Click
 
 #### show : returns collection of Click events
@@ -298,6 +369,22 @@ aweber.click.show({
     listId : '<listId>',
     campaignId : '<campaignId>',
     linkId : '<linkId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### showById : returns event where a Subscriber clicks a Link in a Message.
+``` javascript 
+aweber.click.showById({
+    accountId : '<accountId >',
+    listId : '<listId>',
+    campaignId : '<campaignId>',
+    linkId : '<linkId>',
+    clickId : '<clickId>'
 }).then((result)=>{
     console.log(result);
 }).catch((error)=> {
@@ -317,6 +404,24 @@ aweber.component.show({
     listId : '<listId>',
     campaignId : '<campaignId>',
     linkId : '<linkId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### showById : return a Component of a WebFormSplitTest
+
+``` javascript 
+
+aweber.component.showById({
+    accountId : '<accountId >',
+    listId : '<listId>',
+    campaignId : '<campaignId>',
+    linkId : '<linkId>',
+    componentId : '<componentId>'
 }).then((result)=>{
     console.log(result);
 }).catch((error)=> {
