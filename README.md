@@ -446,6 +446,21 @@ aweber.customField.show({
 
 ```
 
+#### showById : returns collection of CustomFields for a List
+
+``` javascript
+aweber.customField.showById({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    customFieldId : '<customFieldId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
 #### create : create a custom field for a list
 
 ``` javascript 
@@ -463,6 +478,46 @@ aweber.customField.create({
 
 ```
 
+#### update : update custom Field
+
+Warning: Modifing/Deleting CustomFields has side effects, find out more here: https://help.aweber.com/entries/21749682-why-could-changing-my-custom-field-names-cause-problems
+
+``` javascript 
+
+aweber.customField.update({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    customFieldId : 'customFieldId'
+},{
+    name : '<name>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### delete : delete a custom Field
+
+Warning: Modifing/Deleting CustomFields has side effects, find out more here: https://help.aweber.com/entries/21749682-why-could-changing-my-custom-field-names-cause-problems
+
+``` javascript 
+
+aweber.customField.delete({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    customFieldId : 'customFieldId'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+
+
 ## Doc
 
 #### show : return all docs
@@ -470,6 +525,21 @@ aweber.customField.create({
 ``` javascript
 
 aweber.doc.show({})
+.then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### showById : return doc by its Id 
+
+``` javascript
+
+aweber.doc.showById({
+    docId : '<docId>'
+})
 .then((result)=>{
     console.log(result);
 }).catch((error)=> {
@@ -486,6 +556,21 @@ aweber.doc.show({})
 
 aweber.integration.show({accountId : '<accountId>'})
 .then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### showById : return 3rd Party Service Integrations 
+
+``` javascript
+
+aweber.integration.showById({
+    accountId : '<accountId>',
+    integrationId : '<integrationId>'
+}).then((result)=>{
     console.log(result);
 }).catch((error)=> {
     console.log(error);
@@ -511,6 +596,23 @@ aweber.link.show({
 
 ```
 
+#### showById : return a Link appearing in a Campaign 
+
+``` javascript
+
+aweber.link.showById({
+    accountId : '<accountId>',
+    listId : '<linkId>',
+    campaignId : '<campaignId>',
+    linkId : '<linkId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
 ## List 
 
 #### show : returns collection of Subscriber Lists
@@ -519,6 +621,21 @@ aweber.link.show({
 
 aweber.list.show({
     accountId : '<accountId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### showById : return Subscriber List 
+
+``` javascript
+
+aweber.list.showById({
+    accountId : '<accountId>',
+    listId : '<listId>'
 }).then((result)=>{
     console.log(result);
 }).catch((error)=> {
@@ -561,6 +678,23 @@ aweber.message.show({
 
 ```
 
+#### showById : returns a sent message event
+   
+``` javascript
+
+aweber.message.showById({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    campaignId : '<campaignId>',
+    messageId : '<messageId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
 #### getSubscribers : returns a collection of Subscribers that were sent this Campaign
 
 ``` javascript
@@ -585,6 +719,23 @@ aweber.message.getSubscribers({
 ``` javascript
 
 aweber.open.show({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    campaignId : '<campaignId>',
+    messageId : '<messageId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### show : returns an Open event
+
+``` javascript
+
+aweber.open.showById({
     accountId : '<accountId>',
     listId : '<listId>',
     campaignId : '<campaignId>',
@@ -616,10 +767,26 @@ aweber.stat.show({
 
 ```
 
+#### showById : return a Broadcast Campaign Stat
+
+``` javascript
+
+aweber.stat.showById({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    campaignId : '<campaignId>',
+    statId : '<statId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
 ## Subscriber
 
 #### show : return collection of subscribers
-
 
 ``` javascript
 
@@ -648,7 +815,7 @@ aweber.subscriber.find({
     country : '<country>',
     custom_fields : '<custom_fields>' // in json object Custom Field Data,
     status : '<status>',
-    name : '<name>'
+    name : '<name>',
     // ... and other Subscriber collection field please refer https://labs.aweber.com/docs/reference/1.0#subscriber_collection
 }).then((result)=>{
     console.log(result);
