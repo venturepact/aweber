@@ -845,6 +845,74 @@ aweber.subscriber.create({
 
 ```
 
+#### showById : return subscriber
+
+``` javascript
+
+aweber.subscriber.showById({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    subscriberId : '<subscriberId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### update : update subscriber
+
+``` javascript
+
+aweber.subscriber.showById({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    subscriberId : '<subscriberId>'
+},{
+    // fields that you want to update
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### getActivity : return analytics activity for this Subscriber.
+
+``` javascript
+
+aweber.subscriber.getActivity({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    subscriberId : '<subscriberId>'
+},{
+    // fields that you want to update
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
+#### archive : delete a subscriber and all their data
+
+``` javascript
+
+aweber.subscriber.archive({
+    accountId : '<accountId>',
+    listId : '<listId>',
+    subscriberId : '<subscriberId>'
+}).then((result)=>{
+    console.log(result);
+}).catch((error)=> {
+    console.log(error);
+})
+
+```
+
 ## Tracked Event 
 
 #### show : returns A collection of TrackedEvents
