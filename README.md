@@ -13,14 +13,14 @@ It capsulates the access to REST API end point in asynchronous JavaScript promis
 If you are using aweber as an API library in your Node.js project :
 
 <pre>
-  $ npm install aweber
+  $ npm install node-aweber
 </pre>
 
 If you want to get the latest from GitHub :
 
 <pre>
   $ git clone git://github.com/venturepact/aweber.git 
-  $ cd aweber
+  $ cd node-aweber
   $ npm link
 </pre>
 
