@@ -1,5 +1,5 @@
 {
-  "name": "aweber",
+  "name": "node-aweber",
   "version": "1.0.0",
   "description": "A nodejs module to connect to aweber API",
   "main": "aweber.js",
