@@ -33,7 +33,7 @@ If you want to get the latest from GitHub :
 The first part is to get authorization url and oauth_token_secret
 
 ```javascript
-var aweber =  require('aweber');
+var aweber =  require('node-aweber');
 
 var configuration = {
     appId : '<your aweber app id>',
