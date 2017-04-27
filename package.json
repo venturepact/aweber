@@ -1,6 +1,6 @@
 {
   "name": "node-aweber",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A nodejs module to connect to aweber API",
   "main": "aweber.js",
   "scripts": {
