@@ -2,7 +2,7 @@
   "name": "node-aweber",
   "version": "1.0.4",
   "description": "A nodejs module to connect to aweber API",
-  "main": "aweber.js",
+  "main": "lib/aweber.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
