@@ -168,6 +168,8 @@ aweber.account.getWebFormSplitTests({
 aweber.broadcast.show({
         accountId : '< accountId >',
         listId : '< listId >'
+    },{
+        status : '<status>' // ENUM : "draft", "scheduled", "sent"  (required Param)
     })
     .then((result)=>{
         console.log(result);
