@@ -235,7 +235,7 @@ aweber.broadcast.delete({
 #### update : Update Broadcast message 
 
 ``` javascript 
-aweber.broadcast.delete({
+aweber.broadcast.update({
         accountId : '< accountId >',
         listId : '< listId >',
         broadcastId : '<broadcastId>'
