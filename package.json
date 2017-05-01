@@ -1,6 +1,6 @@
 {
-  "name": "node-aweber",
-  "version": "1.0.8",
+  "name": "aweber",
+  "version": "1.0.2",
   "description": "A nodejs module to connect to aweber API",
   "main": "lib/aweber.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "aweber",
     "nodejs"
   ],
-  "author": "Vikash Dahiya",
+  "author": "Tarun Gupta",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/venturepact/aweber/issues"

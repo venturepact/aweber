@@ -13,14 +13,14 @@ It capsulates the access to REST API end point in asynchronous JavaScript promis
 If you are using aweber as an API library in your Node.js project :
 
 <pre>
-  $ npm install node-aweber
+  $ npm install aweber
 </pre>
 
 If you want to get the latest from GitHub :
 
 <pre>
   $ git clone git://github.com/venturepact/aweber.git 
-  $ cd node-aweber
+  $ cd aweber
   $ npm link
 </pre>
 
@@ -33,7 +33,7 @@ If you want to get the latest from GitHub :
 The first part is to get authorization url and oauth_token_secret
 
 ```javascript
-var aweber =  require('node-aweber');
+var aweber =  require('aweber');
 
 var configuration = {
     appId : '<your aweber app id>',
