@@ -2,6 +2,9 @@
 
 Aweber API Connection Library for Node.js Applications
 
+[![npm](https://img.shields.io/npm/v/aweber.svg?maxAge=2592000)](https://www.npmjs.com/package/aweber)
+[![npm](https://img.shields.io/npm/dt/aweber.svg?maxAge=2592000)](https://www.npmjs.com/package/aweber)
+
 
 ## Abstract
 
